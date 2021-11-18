@@ -3,7 +3,7 @@
     "id": "steel",
     "name": "Steel",
     "version": "${version}",
-    "description": "A Minecraft mod that brings a tougher metal to light.",
+    "description": "A Minecraft mod for Fabric that brings a tougher metal to light.",
     "license": "MIT",
     "authors": [
         {
