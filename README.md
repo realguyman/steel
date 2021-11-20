@@ -1,6 +1,6 @@
-# Steel
+# Steel ![pixelated steel ingot](./src/main/resources/assets/steel/textures/item/steel_ingot.png)
 
-<img src="./src/main/resources/assets/steel/icon.png" alt="Pixelated steel ingot" width="128">
+![GitHub](https://img.shields.io/github/license/realguyman/steel) ![GitHub issues](https://img.shields.io/github/issues/realguyman/steel)
 
 A [Minecraft](https://minecraft.net/) mod for [Fabric](https://fabricmc.net/) that brings a tougher metal to light.
 
