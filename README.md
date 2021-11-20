@@ -1,5 +1,7 @@
 # Steel
 
+<img src="./src/main/resources/assets/steel/icon.png" alt="Pixelated steel ingot" width="128">
+
 A [Minecraft](https://minecraft.net/) mod for [Fabric](https://fabricmc.net/) that brings a tougher metal to light.
 
 
