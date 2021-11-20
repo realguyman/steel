@@ -7,7 +7,8 @@ A [Minecraft](https://minecraft.net/) mod for [Fabric](https://fabricmc.net/) th
 
 - Java 8
 - Minecraft 1.15.2
-- Fabric Loader >= 0.12.5
+- Fabric Loader >= 0.8.9+build.203
+- Fabric API >= 0.10.8+build.310-1.15
 
 
 ## Installation
