@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/realguyman/steel) ![GitHub issues](https://img.shields.io/github/issues/realguyman/steel)
 
-Create tougher, more durable equipment. It's _unlikely_ this mod will conflict with other mods or cause issues due to simplicity.
+Create tougher, more durable equipment. It's _unlikely_ this mod will conflict with other mods or otherwise cause issues.
 
 
 ## Requirements
