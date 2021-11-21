@@ -1,6 +1,6 @@
 # Steel ![pixelated steel ingot](./src/main/resources/assets/steel/textures/item/steel_ingot.png)
 
-![GitHub](https://img.shields.io/github/license/realguyman/steel) ![GitHub issues](https://img.shields.io/github/issues/realguyman/steel)
+![GitHub](https://img.shields.io/github/license/realguyman/steel) ![GitHub issues](https://img.shields.io/github/issues/realguyman/steel) ![GitHub all releases](https://img.shields.io/github/downloads/realguyman/steel/total)
 
 Create tougher, more durable equipment. It's _unlikely_ this mod will conflict with other mods or otherwise cause issues.
 
