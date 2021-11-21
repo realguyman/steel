@@ -1,3 +1,4 @@
 {
-    "item.steel.steel_ingot": "Steel Ingot"
+    "item.steel.steel_ingot": "Steel Ingot",
+    "itemGroup.steel.all": "Steel"
 }
