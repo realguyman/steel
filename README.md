@@ -17,4 +17,4 @@ Create tougher, more durable equipment. It's _unlikely_ this mod will conflict w
 
 ## Installation
 
-Download the `steel-x.x.x.jar` file from [GitHub releases](https://github.com/realguyman/steel/releases) and drop it into your Minecraft mods folder.
+Download the appropriate `steel-mcx.x.x-x.x.x.jar` file from [GitHub releases](https://github.com/realguyman/steel/releases) and drop it into your mods folder.
