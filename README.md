@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/realguyman/steel) ![GitHub issues](https://img.shields.io/github/issues/realguyman/steel)
 
-A [Minecraft](https://minecraft.net/) mod for [Fabric](https://fabricmc.net/) that brings a tougher metal to light.
+Create tougher, more durable equipment. It's _unlikely_ this mod will conflict with other mods or cause issues due to simplicity.
 
 
 ## Requirements
