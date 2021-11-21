@@ -4,6 +4,6 @@
         "item": "minecraft:iron_ingot"
     },
     "result": "steel:steel_ingot",
-    "experience": 0.5,
+    "experience": 1,
     "cookingtime": 800
 }
