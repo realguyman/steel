@@ -9,11 +9,13 @@
         {
             "name": "realguyman",
             "contact": {
+                "homepage": "https://github.com/realguyman",
                 "email": "realguyman@protonmail.com"
             }
         }
     ],
     "contact": {
+        "homepage": "https://github.com/realguyman/steel",
         "sources": "https://github.com/realguyman/steel",
         "issues": "https://github.com/realguyman/steel/issues"
     },
