@@ -1,6 +1,7 @@
 package io.github.realguyman.steel.registries;
 
 import io.github.realguyman.steel.Initializer;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -11,6 +12,11 @@ public class ItemRegistry {
     );
 
     public static final Item STEEL_NUGGET = new Item(
+        new Item.Settings().group(Initializer.ITEM_GROUP)
+    );
+
+    public static final Item STEEL_BLOCK = new BlockItem(
+        BlockRegistry.STEEL_BLOCK,
         new Item.Settings().group(Initializer.ITEM_GROUP)
     );
 
@@ -25,6 +31,12 @@ public class ItemRegistry {
             Registry.ITEM,
             new Identifier(Initializer.MOD_ID, "steel_nugget"),
             STEEL_NUGGET
+        );
+
+        Registry.register(
+            Registry.ITEM,
+            new Identifier(Initializer.MOD_ID, "steel_block"),
+            STEEL_BLOCK
         );
     }
 }

@@ -41,6 +41,7 @@ public class Initializer implements ModInitializer {
     @Override
     public void onInitialize() {
         ItemRegistry.register();
+        BlockRegistry.register();
 
         Identifier chestLootTableIdentifiers[] = new Identifier[CHEST_LOOT_TABLES.length];
 
