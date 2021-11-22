@@ -1,5 +1,6 @@
 package io.github.realguyman.steel;
 
+import io.github.realguyman.steel.registries.BlockRegistry;
 import io.github.realguyman.steel.registries.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
