@@ -56,8 +56,13 @@ public class Initializer implements ModInitializer {
                     table.withPool(
                         FabricLootPoolBuilder.builder()
                         .withRolls(UniformLootTableRange.between(0, 2))
-                        .withFunction(SetCountLootFunction.builder(UniformLootTableRange.between(1, 3)))
-                        .withEntry(ItemEntry.builder(ItemRegistry.STEEL_INGOT))
+                        .withEntry(
+                            ItemEntry.builder(ItemRegistry.STEEL_INGOT)
+                            .withFunction(SetCountLootFunction.builder(UniformLootTableRange.between(1, 3)))
+                        ).withEntry(
+                            ItemEntry.builder(ItemRegistry.STEEL_NUGGET)
+                            .withFunction(SetCountLootFunction.builder(UniformLootTableRange.between(3, 9)))
+                        )
                     );
                 }
             }
