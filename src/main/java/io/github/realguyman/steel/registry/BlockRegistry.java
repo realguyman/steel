@@ -1,4 +1,4 @@
-package io.github.realguyman.steel.registries;
+package io.github.realguyman.steel.registry;
 
 import io.github.realguyman.steel.Initializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -11,17 +11,11 @@ import net.minecraft.util.registry.Registry;
 
 public class BlockRegistry {
     public static final Block STEEL_BLOCK = new Block(
-        FabricBlockSettings.of(Material.METAL)
-        .strength(5, 6)
-        .sounds(BlockSoundGroup.METAL)
+        FabricBlockSettings.of(Material.METAL).strength(5, 6).sounds(BlockSoundGroup.METAL)
         .breakByTool(FabricToolTags.PICKAXES, 2)
     );
-    
+
     public static void register() {
-        Registry.register(
-            Registry.BLOCK,
-            new Identifier(Initializer.MOD_ID, "steel_block"),
-            STEEL_BLOCK
-        );
+        Registry.register(Registry.BLOCK, new Identifier(Initializer.MOD_ID, "steel_block"), STEEL_BLOCK);
     }
 }
