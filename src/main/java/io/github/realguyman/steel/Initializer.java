@@ -44,28 +44,28 @@ public class Initializer implements ModInitializer {
         ItemRegistry.register();
         BlockRegistry.register();
 
-        Identifier chestLootTableIdentifiers[] = new Identifier[CHEST_LOOT_TABLES.length];
+        Identifier[] lootTableIds = new Identifier[CHEST_LOOT_TABLES.length];
 
         for (int i = 0; i < CHEST_LOOT_TABLES.length; i++) {
-            chestLootTableIdentifiers[i] = new Identifier("minecraft:chests/" + CHEST_LOOT_TABLES[i]);
+            lootTableIds[i] = new Identifier("minecraft", "chests/" + CHEST_LOOT_TABLES[i]);
         }
 
-        LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, table, setter) -> {
-            for (Identifier chestLootTableIdentifier : chestLootTableIdentifiers) {
-                if (chestLootTableIdentifier.equals(id)) {
-                    table.withPool(
-                        FabricLootPoolBuilder.builder()
-                        .withRolls(UniformLootTableRange.between(0, 2))
-                        .withEntry(
-                            ItemEntry.builder(ItemRegistry.STEEL_INGOT)
-                            .withFunction(SetCountLootFunction.builder(UniformLootTableRange.between(1, 3)))
+        LootTableLoadingCallback.EVENT.register((resourceManager, loot, id, table, setter) -> {
+                for (Identifier lootTableId : lootTableIds) {
+                    if (lootTableId.equals(id)) {
+                        FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                        .withRolls(UniformLootTableRange.between(0, 2)).withEntry(
+                            ItemEntry.builder(ItemRegistry.STEEL_NUGGET).setWeight(3)
+                            .withFunction(SetCountLootFunction.builder(UniformLootTableRange.between(6, 12)))
                         ).withEntry(
-                            ItemEntry.builder(ItemRegistry.STEEL_NUGGET)
-                            .withFunction(SetCountLootFunction.builder(UniformLootTableRange.between(3, 9)))
-                        )
-                    );
+                            ItemEntry.builder(ItemRegistry.STEEL_INGOT).setWeight(1)
+                            .withFunction(SetCountLootFunction.builder(UniformLootTableRange.between(1, 3)))
+                        );
+
+                        table.withPool(poolBuilder);
+                    }
                 }
             }
-        });
+        );
     }
 }
