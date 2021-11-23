@@ -1,12 +1,16 @@
 # Steel
 
-![GitHub](https://img.shields.io/github/license/realguyman/steel) ![GitHub all releases](https://img.shields.io/github/downloads/realguyman/steel/total)
+![GitHub all releases](https://img.shields.io/github/downloads/realguyman/steel/total)
 
 Create tougher, more durable equipment. Take note that it's _unlikely_ this mod will conflict with other mods or otherwise cause issues.
 
-## Usage
+## Features
 
-Steel nuggets and ingots can be found in treasure chests around your Minecraft world. If you want to make steel you'll need a blast furnace (regular furnaces don't get hot enough), iron, and a lot of fuel to keep the fires burning (4 pieces of coal for iron ingots and 4 blocks of coal to smelt an iron block). Steel can be created from iron nuggets, ingots, and even blocks. As expected you can craft steel nuggets, ingots, and blocks like the vanilla shaped recipes.
+- Steel can be crafted from cooking iron nuggets, ingots, or blocks in a blast furnace (regular furnaces aren't hot enough).
+- Steel nuggets, ingots, and armor can be found in treasure chests throughout your world.
+- Villager armorers, toolsmiths, and weaponsmiths can buy steel nuggets and ingots from you.
+- Armorers can sell you steel armor as well.
+- A decorative steel block.
 
 ## Requirements
 
@@ -19,7 +23,7 @@ Although [Java 8](https://adoptium.net/?variant=openjdk8&jvmVariant=hotspot) is 
 
 ## Installation
 
-Download the appropriate `steel-x.x.x+mc.x.x.x.jar` file from [GitHub releases](https://github.com/realguyman/steel/releases) and drop it into your mods folder.
+Download the appropriate `steel-*.jar` file from [GitHub releases](https://github.com/realguyman/steel/releases) and drop it into your mods folder.
 
 ## For Developers
 

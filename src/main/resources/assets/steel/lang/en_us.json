@@ -1,6 +1,10 @@
 {
-    "block.steel.steel_block": "Block of Steel",
-    "item.steel.steel_ingot": "Steel Ingot",
     "item.steel.steel_nugget": "Steel Nugget",
-    "itemGroup.steel.all": "Steel"
+    "item.steel.steel_ingot": "Steel Ingot",
+    "block.steel.steel_block": "Block of Steel",
+    "item.steel.steel_helmet": "Steel Helmet",
+    "item.steel.steel_chestplate": "Steel Chestplate",
+    "item.steel.steel_leggings": "Steel Leggings",
+    "item.steel.steel_boots": "Steel Boots",
+    "itemGroup.steel.general": "Steel"
 }
