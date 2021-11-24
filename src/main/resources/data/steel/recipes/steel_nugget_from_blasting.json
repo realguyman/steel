@@ -1,8 +1,37 @@
 {
     "type": "minecraft:blasting",
-    "ingredient": {
-        "item": "minecraft:iron_nugget"
-    },
+    "ingredient": [
+        {
+            "item": "minecraft:iron_nugget"
+        },
+        {
+            "item": "steel:steel_pickaxe"
+        },
+        {
+            "item": "steel:steel_shovel"
+        },
+        {
+            "item": "steel:steel_axe"
+        },
+        {
+            "item": "steel:steel_hoe"
+        },
+        {
+            "item": "steel:steel_sword"
+        },
+        {
+            "item": "steel:steel_helmet"
+        },
+        {
+            "item": "steel:steel_chestplate"
+        },
+        {
+            "item": "steel:steel_leggings"
+        },
+        {
+            "item": "steel:steel_boots"
+        }
+    ],
     "result": "steel:steel_nugget",
     "experience": 0.11,
     "cookingtime": 356
