@@ -6,5 +6,10 @@
     "item.steel.steel_chestplate": "Steel Chestplate",
     "item.steel.steel_leggings": "Steel Leggings",
     "item.steel.steel_boots": "Steel Boots",
+    "item.steel.steel_shovel": "Steel Shovel",
+    "item.steel.steel_pickaxe": "Steel Pickaxe",
+    "item.steel.steel_axe": "Steel Axe",
+    "item.steel.steel_hoe": "Steel Hoe",
+    "item.steel.steel_sword": "Steel Sword",
     "itemGroup.steel.general": "Steel"
 }
