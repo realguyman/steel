@@ -7,9 +7,10 @@ Create tougher, more durable equipment. Take note that it's _unlikely_ this mod 
 ## Features
 
 - Steel can be crafted from cooking iron nuggets, ingots, or blocks in a blast furnace (regular furnaces aren't hot enough).
-- Steel nuggets, ingots, and armor can be found in treasure chests throughout your world.
+- Steel nuggets, ingots, tools, sword, and armor can be found in treasure chests throughout your world.
+- End city treasure has enchanted tools, swords, and armor.
 - Villager armorers, toolsmiths, and weaponsmiths can buy steel nuggets and ingots from you.
-- Armorers can sell you steel armor as well.
+- Armorers can sell you steel armor, toolsmiths enchanted steel tools, and weaponsmiths enchanted steel swords.
 - A decorative steel block.
 
 ## Requirements
