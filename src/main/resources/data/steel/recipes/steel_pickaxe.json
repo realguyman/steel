@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        " | ",
+        " | "
+    ],
+    "key": {
+        "#": {
+            "item": "steel:steel_ingot"
+        },
+        "|": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "steel:steel_pickaxe"
+    }
+}
