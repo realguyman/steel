@@ -1,7 +1,5 @@
 package io.github.realguyman.steel;
 
-import java.util.Random;
-
 import io.github.realguyman.steel.registry.BlockRegistry;
 import io.github.realguyman.steel.registry.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
@@ -9,7 +7,6 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -18,8 +15,8 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
-import net.minecraft.village.TradeOffers;
 import net.minecraft.village.VillagerProfession;
+import net.minecraft.village.TradeOffers.Factory;
 
 public class Initializer implements ModInitializer {
     public static final String MOD_ID = "steel";
@@ -52,87 +49,43 @@ public class Initializer implements ModInitializer {
         ItemRegistry.register();
         BlockRegistry.register();
 
+        Factory steelNuggetTrade = (entity, random) -> new TradeOffer(new ItemStack(ItemRegistry.STEEL_NUGGET, 11),
+                new ItemStack(Items.EMERALD), 12, 10, 0.10F);
+
+        Factory steelIngotTrade = (entity, random) -> new TradeOffer(new ItemStack(ItemRegistry.STEEL_INGOT, 4),
+                new ItemStack(Items.EMERALD, 3), 12, 30, 0.15F);
+
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.ARMORER, 2, factories -> {
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(ItemRegistry.STEEL_NUGGET, 7), new ItemStack(Items.EMERALD, 1), 24, 20, 0.10F);
-                }
-            });
+            factories.add(steelNuggetTrade);
 
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(Items.EMERALD, 12), new ItemStack(ItemRegistry.STEEL_LEGGINGS), 6, 30, 0.2F);
-                }
-            });
+            factories.add((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 12),
+                    new ItemStack(ItemRegistry.STEEL_LEGGINGS), 6, 30, 0.2F));
 
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(Items.EMERALD, 7), new ItemStack(ItemRegistry.STEEL_BOOTS), 6, 30, 0.2F);
-                }
-            });
+            factories.add((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 9),
+                    new ItemStack(ItemRegistry.STEEL_BOOTS), 6, 30, 0.2F));
         });
 
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.ARMORER, 3, factories -> {
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(ItemRegistry.STEEL_INGOT, 4), new ItemStack(Items.EMERALD, 3), 12, 30, 0.15F);
-                }
-            });
+            factories.add(steelIngotTrade);
 
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(Items.EMERALD, 9), new ItemStack(ItemRegistry.STEEL_HELMET), 6, 30, 0.2F);
-                }
-            });
+            factories.add((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 10),
+                    new ItemStack(ItemRegistry.STEEL_HELMET), 6, 30, 0.2F));
 
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(Items.EMERALD, 15), new ItemStack(ItemRegistry.STEEL_CHESTPLATE), 6, 30, 0.2F);
-                }
-            });
+            factories.add((entity, random) -> new TradeOffer(new ItemStack(Items.EMERALD, 15),
+                    new ItemStack(ItemRegistry.STEEL_CHESTPLATE), 6, 30, 0.2F));
         });
 
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 2, factories -> {
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(ItemRegistry.STEEL_NUGGET, 7), new ItemStack(Items.EMERALD, 1), 24, 20, 0.10F);
-                }
-            });
-        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 2,
+                factories -> factories.add(steelNuggetTrade));
 
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 3, factories -> {
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(ItemRegistry.STEEL_INGOT, 4), new ItemStack(Items.EMERALD, 3), 12, 30, 0.15F);
-                }
-            });
-        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 3,
+                factories -> factories.add(steelIngotTrade));
 
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 2, factories -> {
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(ItemRegistry.STEEL_NUGGET, 7), new ItemStack(Items.EMERALD, 1), 24, 20, 0.10F);
-                }
-            });
-        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 2,
+                factories -> factories.add(steelNuggetTrade));
 
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 3, factories -> {
-            factories.add(new TradeOffers.Factory() {
-                @Override
-                public TradeOffer create(Entity entity, Random random) {
-                    return new TradeOffer(new ItemStack(ItemRegistry.STEEL_INGOT, 4), new ItemStack(Items.EMERALD, 3), 12, 30, 0.15F);
-                }
-            });
-        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 3,
+                factories -> factories.add(steelIngotTrade));
 
         Identifier[] lootTableIds = new Identifier[CHEST_LOOT_TABLES.length];
 
