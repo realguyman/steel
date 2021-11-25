@@ -126,83 +126,83 @@ public class Initializer implements ModInitializer {
 
         LootTableLoadingCallback.EVENT.register((resourceManager, loot, id, table, setter) -> {
             if (id.equals(lootTables[3])) {
-                table.withPool(
-                    FabricLootPoolBuilder.builder().withRolls(
+                table.pool(
+                    FabricLootPoolBuilder.builder().rolls(
                         UniformLootTableRange.between(0, 3)
-                    ).withEntry(
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_SHOVEL)
-                        .setWeight(3)
-                        .withFunction(EnchantRandomlyLootFunction.builder())
-                    ).withEntry(
+                        .weight(3)
+                        .apply(EnchantRandomlyLootFunction.builder())
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_PICKAXE)
-                        .setWeight(3)
-                        .withFunction(EnchantRandomlyLootFunction.builder())
-                    ).withEntry(
+                        .weight(3)
+                        .apply(EnchantRandomlyLootFunction.builder())
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_AXE)
-                        .setWeight(3)
-                        .withFunction(EnchantRandomlyLootFunction.builder())
-                    ).withEntry(
+                        .weight(3)
+                        .apply(EnchantRandomlyLootFunction.builder())
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_HOE)
-                        .setWeight(3)
-                        .withFunction(EnchantRandomlyLootFunction.builder())
-                    ).withEntry(
+                        .weight(3)
+                        .apply(EnchantRandomlyLootFunction.builder())
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_SWORD)
-                        .setWeight(3)
-                        .withFunction (EnchantRandomlyLootFunction.builder())
-                    ).withEntry(
+                        .weight(3)
+                        .apply (EnchantRandomlyLootFunction.builder())
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_HELMET)
-                        .setWeight(2)
-                        .withFunction(EnchantRandomlyLootFunction.builder())
-                    ).withEntry(
+                        .weight(2)
+                        .apply(EnchantRandomlyLootFunction.builder())
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_CHESTPLATE)
-                        .setWeight(1)
-                        .withFunction(EnchantRandomlyLootFunction.builder())
-                    ).withEntry(
+                        .weight(1)
+                        .apply(EnchantRandomlyLootFunction.builder())
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_LEGGINGS)
-                        .setWeight(1)
-                        .withFunction(EnchantRandomlyLootFunction.builder())
-                    ).withEntry(
+                        .weight(1)
+                        .apply(EnchantRandomlyLootFunction.builder())
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_BOOTS)
-                        .setWeight(2)
-                        .withFunction(EnchantRandomlyLootFunction.builder())
+                        .weight(2)
+                        .apply(EnchantRandomlyLootFunction.builder())
                     )
                 );
             }
 
             for (Identifier lootTable : lootTables) {
                 if (lootTable.equals(id)) {
-                    table.withPool(FabricLootPoolBuilder.builder()
-                    .withRolls(UniformLootTableRange.between(0, 3))
-                    .withEntry(
+                    table.pool(FabricLootPoolBuilder.builder()
+                    .rolls(UniformLootTableRange.between(0, 3))
+                    .with(
                         ItemEntry.builder(ItemRegistry.STEEL_NUGGET)
-                        .setWeight(10)
-                        .withFunction(SetCountLootFunction.builder(
+                        .weight(10)
+                        .apply(SetCountLootFunction.builder(
                             UniformLootTableRange.between(4, 12)
                         ))
-                    ).withEntry(
+                    ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_INGOT)
-                        .setWeight(10)
-                        .withFunction(SetCountLootFunction.builder(
+                        .weight(10)
+                        .apply(SetCountLootFunction.builder(
                             UniformLootTableRange.between(1, 3)
                         ))
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_SHOVEL).setWeight(3)
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_PICKAXE).setWeight(3)
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_AXE).setWeight(3)
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_HOE).setWeight(3)
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_SWORD).setWeight(3)
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_HELMET).setWeight(2)
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_CHESTPLATE).setWeight(1)
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_LEGGINGS).setWeight(1)
-                    ).withEntry(
-                        ItemEntry.builder(ItemRegistry.STEEL_BOOTS).setWeight(2)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_SHOVEL).weight(3)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_PICKAXE).weight(3)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_AXE).weight(3)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_HOE).weight(3)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_SWORD).weight(3)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_HELMET).weight(2)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_CHESTPLATE).weight(1)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_LEGGINGS).weight(1)
+                    ).with(
+                        ItemEntry.builder(ItemRegistry.STEEL_BOOTS).weight(2)
                     ));
 
                     break;
