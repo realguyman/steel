@@ -63,7 +63,7 @@ public class ItemRegistry {
     public static final Item STEEL_AXE = new SteelAxeItem(SteelToolMaterial.INSTANCE, 6, -3.1F,
             new FabricItemSettings().group(Initializer.ITEM_GROUP));
 
-    public static final Item STEEL_HOE = new SteelHoeItem(SteelToolMaterial.INSTANCE, -1.0F,
+    public static final Item STEEL_HOE = new SteelHoeItem(SteelToolMaterial.INSTANCE, -2, -1.0F,
             new FabricItemSettings().group(Initializer.ITEM_GROUP));
 
     public static final Item STEEL_SWORD = new SwordItem(SteelToolMaterial.INSTANCE, 3, -2.4F,
