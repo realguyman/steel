@@ -19,7 +19,7 @@ Drop the appropriate `steel-*.jar` file into your mods folder.
 ### Requirements
 
 * Java >= 8
-* Minecraft 1.15.2
+* Minecraft 1.16.5
 * Fabric Loader >= 0.11.7
 * Fabric API
 
