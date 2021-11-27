@@ -41,10 +41,22 @@ public class Initializer implements ModInitializer {
         "woodland_mansion"
     };
 
-    public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
-        new Identifier(MOD_ID, "general"),
-        () -> new ItemStack(ItemRegistry.STEEL_INGOT)
-    );
+    public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.create(
+        new Identifier(MOD_ID, "all")
+    ).icon(() -> new ItemStack(ItemRegistry.STEEL_INGOT)).appendItems(stacks -> {
+        stacks.add(new ItemStack(ItemRegistry.STEEL_INGOT));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_NUGGET));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_BLOCK));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_SHOVEL));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_PICKAXE));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_AXE));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_HOE));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_SWORD));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_HELMET));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_CHESTPLATE));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_LEGGINGS));
+        stacks.add(new ItemStack(ItemRegistry.STEEL_BOOTS));
+    }).build();
 
     @Override
     public void onInitialize() {
