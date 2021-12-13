@@ -9,15 +9,15 @@ import net.minecraft.sound.SoundEvents;
 
 public class SteelArmorMaterial implements ArmorMaterial {
     private static final int[] DURABILITY = {13, 15, 16, 11};
-    private static final int[] PROTECTION = {2, 5, 7, 2};
-    
+    private static final int[] PROTECTION = {2, 5, 6, 2};
+
     public static final SteelArmorMaterial INSTANCE = new SteelArmorMaterial();
 
     @Override
     public int getDurability(EquipmentSlot slot) {
         return DURABILITY[slot.getEntitySlotId()] * 25;
     }
-    
+
     @Override
     public int getProtectionAmount(EquipmentSlot slot) {
         return PROTECTION[slot.getEntitySlotId()];
