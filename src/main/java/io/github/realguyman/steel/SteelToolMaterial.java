@@ -14,7 +14,7 @@ public class SteelToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 6.0F;
+        return 6.5F;
     }
 
     @Override
