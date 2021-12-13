@@ -1,7 +1,5 @@
 # Steel
 
-![GitHub all releases](https://img.shields.io/github/downloads/realguyman/steel/total)
-
 Create tougher, more durable equipment.
 
 ## Features
@@ -9,8 +7,8 @@ Create tougher, more durable equipment.
 * Added steel nugget, ingot, block, sword, tools, and armor.
 * Randomly enchanted steel swords, tools, and armor can be found in end city treasure chests.
 * There's a rare chance you'll find non-enchanted steel tools, swords, and armor in treasure chests around your world.
-* Steel nuggets and ingots can be sold to apprentice and journeyman armorers, toolsmiths, and weaponsmiths.
-* Journeyman armorers, toolsmiths, and weaponsmiths can sell you enchanted steel tools and swords, and non-enchanted steel armor.
+* Steel nuggets and ingots can be sold to apprentice and journeyman armorers, tool smiths, and weapon smiths.
+* Journeyman armorers, tool smiths, and weapon smiths can sell you enchanted steel tools and swords, and non-enchanted steel armor.
 
 ## Installation
 
@@ -36,8 +34,6 @@ Be sure to [setup a development environment for Fabric](https://fabricmc.net/wik
 ### Building
 
 Clone the Git repository or download the source code to your computer. Navigate to the root directory of the source code in your terminal.
-
-You may need to run the Gradle `downloadAssets` and `genSources` tasks before you're able to properly build the project.
 
 On Windows run:
 
