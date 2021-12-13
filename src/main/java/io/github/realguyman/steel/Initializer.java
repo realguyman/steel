@@ -187,13 +187,13 @@ public class Initializer implements ModInitializer {
                     .rolls(UniformLootTableRange.between(0, 3))
                     .with(
                         ItemEntry.builder(ItemRegistry.STEEL_NUGGET)
-                        .weight(10)
+                        .weight(30)
                         .apply(SetCountLootFunction.builder(
                             UniformLootTableRange.between(4, 12)
                         ))
                     ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_INGOT)
-                        .weight(10)
+                        .weight(20)
                         .apply(SetCountLootFunction.builder(
                             UniformLootTableRange.between(1, 3)
                         ))
