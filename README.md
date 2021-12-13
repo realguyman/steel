@@ -14,7 +14,7 @@ Create tougher, more durable equipment.
 
 ## Installation
 
-Drop the appropriate `steel-*.jar` file into your mods folder.
+Drop the appropriate `steel-*.jar` file into your mods folder. Adding this mod to your existing world is safe.
 
 ### Requirements
 
@@ -27,7 +27,7 @@ Although [Java 8](https://adoptium.net/?variant=openjdk8&jvmVariant=hotspot) is 
 
 ### Downloads
 
-The artifacts (`steel-*.jar` files) for Steel are officially available via [GitHub](https://github.com/realguyman/steel/releases) and [Modrinth](https://modrinth.com/mod/steel).
+The artifacts (`steel-*.jar` files) for Steel are officially available via [GitHub](https://github.com/realguyman/steel/releases), [Modrinth](https://modrinth.com/mod/steel), and [CurseForge](https://www.curseforge.com/minecraft/mc-mods/steel-for-fabric).
 
 ## For Developers
 
