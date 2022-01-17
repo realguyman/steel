@@ -11,10 +11,10 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.loot.UniformLootTableRange;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.EnchantRandomlyLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.VillagerProfession;
@@ -140,7 +140,7 @@ public class Initializer implements ModInitializer {
             if (id.equals(lootTables[3])) {
                 table.pool(
                     FabricLootPoolBuilder.builder().rolls(
-                        UniformLootTableRange.between(0, 3)
+                        UniformLootNumberProvider.create(0, 3)
                     ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_SHOVEL)
                         .weight(3)
@@ -184,18 +184,18 @@ public class Initializer implements ModInitializer {
             for (Identifier lootTable : lootTables) {
                 if (lootTable.equals(id)) {
                     table.pool(FabricLootPoolBuilder.builder()
-                    .rolls(UniformLootTableRange.between(0, 3))
+                    .rolls(UniformLootNumberProvider.create(0, 3))
                     .with(
                         ItemEntry.builder(ItemRegistry.STEEL_NUGGET)
                         .weight(30)
                         .apply(SetCountLootFunction.builder(
-                            UniformLootTableRange.between(4, 12)
+                            UniformLootNumberProvider.create(4, 12)
                         ))
                     ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_INGOT)
                         .weight(20)
                         .apply(SetCountLootFunction.builder(
-                            UniformLootTableRange.between(1, 3)
+                            UniformLootNumberProvider.create(1, 3)
                         ))
                     ).with(
                         ItemEntry.builder(ItemRegistry.STEEL_SHOVEL).weight(3)

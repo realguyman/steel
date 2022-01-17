@@ -16,12 +16,12 @@ Drop the appropriate `steel-*.jar` file into your mods folder. Adding this mod t
 
 ### Requirements
 
-* Java >= 8
-* Minecraft 1.16.5
+* Java >= 16
+* Minecraft 1.17.x
 * Fabric Loader >= 0.11.7
 * Fabric API
 
-Although [Java 8](https://adoptium.net/?variant=openjdk8&jvmVariant=hotspot) is highly recommended, this mod should work with newer versions. You should install the latest stable version of [Fabric Loader](https://fabricmc.net/use) and [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api).
+Although [Java 16](https://adoptium.net/releases.html?variant=openjdk16&jvmVariant=hotspot) is highly recommended, this mod should work with newer versions. You should install the latest stable version of [Fabric Loader](https://fabricmc.net/use) and [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api).
 
 ### Downloads
 
