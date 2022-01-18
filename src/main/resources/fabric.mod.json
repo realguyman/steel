@@ -20,10 +20,10 @@
         "issues": "https://github.com/realguyman/steel/issues"
     },
     "depends": {
-        "minecraft": "1.17.x",
-        "fabricloader": ">=0.11.7",
+        "minecraft": "1.18.x",
+        "fabricloader": ">=0.12.12",
         "fabric": "*",
-        "java": ">=16"
+        "java": ">=17"
     },
     "environment": "*",
     "entrypoints": {
