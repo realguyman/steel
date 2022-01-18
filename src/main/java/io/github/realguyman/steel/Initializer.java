@@ -17,8 +17,8 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
-import net.minecraft.village.VillagerProfession;
 import net.minecraft.village.TradeOffers.Factory;
+import net.minecraft.village.VillagerProfession;
 
 public class Initializer implements ModInitializer {
     public static final String MOD_ID = "steel";
@@ -60,6 +60,8 @@ public class Initializer implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        Configuration.load();
+
         ItemRegistry.register();
         BlockRegistry.register();
 
