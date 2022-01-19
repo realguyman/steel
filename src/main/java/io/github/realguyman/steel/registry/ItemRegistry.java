@@ -57,7 +57,7 @@ public class ItemRegistry {
     public static final Item STEEL_PICKAXE = new SteelPickaxeItem(SteelToolMaterial.INSTANCE, 1, -2.8F,
             new FabricItemSettings().group(ItemGroup.TOOLS));
 
-    public static final Item STEEL_AXE = new SteelAxeItem(SteelToolMaterial.INSTANCE, 6, -3.1F,
+    public static final Item STEEL_AXE = new SteelAxeItem(SteelToolMaterial.INSTANCE, Configuration.axeAttackDamage, -3.1F,
             new FabricItemSettings().group(ItemGroup.TOOLS));
 
     public static final Item STEEL_HOE = new SteelHoeItem(SteelToolMaterial.INSTANCE, -2, -1.0F,

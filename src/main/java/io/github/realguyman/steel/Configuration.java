@@ -27,6 +27,7 @@ public class Configuration {
     public static float toolMiningSpeed = 6.5F;
     public static float baseAttackDamage = 2.0F;
     public static int swordAttackDamage = 3;
+    public static float axeAttackDamage = 6.0F;
 
     public static void load() {
         if (filePath.toFile().exists()) {
@@ -47,6 +48,7 @@ public class Configuration {
                 toolMiningSpeed = data.toolMiningSpeed;
                 baseAttackDamage = data.baseAttackDamage;
                 swordAttackDamage = data.swordAttackDamage;
+                axeAttackDamage = data.axeAttackDamage;
 
                 reader.close();
             } catch (IOException e) {
@@ -73,7 +75,8 @@ public class Configuration {
                     2,
                     6.5F,
                     2.0F,
-                    3
+                    3,
+                    6.0F
             ), writer);
             writer.close();
         } catch (IOException e) {
@@ -121,7 +124,10 @@ public class Configuration {
         private final String swordAttackDamageComment = "For reference iron is 3. Must be a positive integer.";
         private final int swordAttackDamage;
 
-        private Data(int helmetArmorRating, int chestplateArmorRating, int leggingsArmorRating, int bootsArmorRating, int armorBaseDurabilityMultiplier, int armorToughness, int armorKnockbackResistance, int enchantability, int toolDurability, int toolMiningLevel, float toolMiningSpeed, float baseAttackDamage, int swordAttackDamage) {
+        private final String axeAttackDamageComment = "For reference iron is 6.0. Must be a float.";
+        private final float axeAttackDamage;
+
+        private Data(int helmetArmorRating, int chestplateArmorRating, int leggingsArmorRating, int bootsArmorRating, int armorBaseDurabilityMultiplier, int armorToughness, int armorKnockbackResistance, int enchantability, int toolDurability, int toolMiningLevel, float toolMiningSpeed, float baseAttackDamage, int swordAttackDamage, float axeAttackDamage) {
             this.helmetArmorRating = helmetArmorRating;
             this.chestplateArmorRating = chestplateArmorRating;
             this.leggingsArmorRating = leggingsArmorRating;
@@ -135,6 +141,7 @@ public class Configuration {
             this.toolMiningSpeed = toolMiningSpeed;
             this.baseAttackDamage = baseAttackDamage;
             this.swordAttackDamage = swordAttackDamage;
+            this.axeAttackDamage = axeAttackDamage;
         }
     }
 }
