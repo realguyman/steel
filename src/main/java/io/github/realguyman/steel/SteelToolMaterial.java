@@ -9,27 +9,27 @@ public class SteelToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 417;
+        return Configuration.toolDurability;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 6.5F;
+        return Configuration.toolMiningSpeed;
     }
 
     @Override
     public float getAttackDamage() {
-        return 2.0F;
+        return Configuration.baseAttackDamage;
     }
 
     @Override
     public int getMiningLevel() {
-        return 2;
+        return Configuration.toolMiningLevel;
     }
 
     @Override
     public int getEnchantability() {
-        return 15;
+        return Configuration.enchantability;
     }
 
     @Override

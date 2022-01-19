@@ -1,5 +1,6 @@
 package io.github.realguyman.steel.registry;
 
+import io.github.realguyman.steel.Configuration;
 import io.github.realguyman.steel.Initializer;
 import io.github.realguyman.steel.SteelArmorMaterial;
 import io.github.realguyman.steel.SteelToolMaterial;
@@ -8,12 +9,7 @@ import io.github.realguyman.steel.item.SteelHoeItem;
 import io.github.realguyman.steel.item.SteelPickaxeItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -61,13 +57,13 @@ public class ItemRegistry {
     public static final Item STEEL_PICKAXE = new SteelPickaxeItem(SteelToolMaterial.INSTANCE, 1, -2.8F,
             new FabricItemSettings().group(ItemGroup.TOOLS));
 
-    public static final Item STEEL_AXE = new SteelAxeItem(SteelToolMaterial.INSTANCE, 6, -3.1F,
+    public static final Item STEEL_AXE = new SteelAxeItem(SteelToolMaterial.INSTANCE, Configuration.axeAttackDamage, -3.1F,
             new FabricItemSettings().group(ItemGroup.TOOLS));
 
     public static final Item STEEL_HOE = new SteelHoeItem(SteelToolMaterial.INSTANCE, -2, -1.0F,
             new FabricItemSettings().group(ItemGroup.TOOLS));
 
-    public static final Item STEEL_SWORD = new SwordItem(SteelToolMaterial.INSTANCE, 3, -2.4F,
+    public static final Item STEEL_SWORD = new SwordItem(SteelToolMaterial.INSTANCE, Configuration.swordAttackDamage, -2.4F,
             new FabricItemSettings().group(ItemGroup.COMBAT));
 
     private static void add(String name, Item item) {
