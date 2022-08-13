@@ -4,13 +4,13 @@ import io.github.realguyman.steel.registry.BlockRegistry;
 import io.github.realguyman.steel.registry.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.EnchantRandomlyLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
@@ -138,86 +138,86 @@ public class Initializer implements ModInitializer {
             lootTables[i] = new Identifier("minecraft", "chests/" + CHEST_LOOT_TABLES[i]);
         }
 
-        LootTableLoadingCallback.EVENT.register((resourceManager, loot, id, table, setter) -> {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             if (id.equals(lootTables[3])) {
-                table.pool(
-                    FabricLootPoolBuilder.builder().rolls(
-                        UniformLootNumberProvider.create(0, 3)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_SHOVEL)
-                        .weight(3)
-                        .apply(EnchantRandomlyLootFunction.builder())
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_PICKAXE)
-                        .weight(3)
-                        .apply(EnchantRandomlyLootFunction.builder())
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_AXE)
-                        .weight(3)
-                        .apply(EnchantRandomlyLootFunction.builder())
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_HOE)
-                        .weight(3)
-                        .apply(EnchantRandomlyLootFunction.builder())
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_SWORD)
-                        .weight(3)
-                        .apply (EnchantRandomlyLootFunction.builder())
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_HELMET)
-                        .weight(2)
-                        .apply(EnchantRandomlyLootFunction.builder())
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_CHESTPLATE)
-                        .weight(1)
-                        .apply(EnchantRandomlyLootFunction.builder())
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_LEGGINGS)
-                        .weight(1)
-                        .apply(EnchantRandomlyLootFunction.builder())
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_BOOTS)
-                        .weight(2)
-                        .apply(EnchantRandomlyLootFunction.builder())
-                    )
+                tableBuilder.pool(
+                        LootPool.builder().rolls(
+                                UniformLootNumberProvider.create(0, 3)
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_SHOVEL)
+                                        .weight(3)
+                                        .apply(EnchantRandomlyLootFunction.builder())
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_PICKAXE)
+                                        .weight(3)
+                                        .apply(EnchantRandomlyLootFunction.builder())
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_AXE)
+                                        .weight(3)
+                                        .apply(EnchantRandomlyLootFunction.builder())
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_HOE)
+                                        .weight(3)
+                                        .apply(EnchantRandomlyLootFunction.builder())
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_SWORD)
+                                        .weight(3)
+                                        .apply (EnchantRandomlyLootFunction.builder())
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_HELMET)
+                                        .weight(2)
+                                        .apply(EnchantRandomlyLootFunction.builder())
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_CHESTPLATE)
+                                        .weight(1)
+                                        .apply(EnchantRandomlyLootFunction.builder())
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_LEGGINGS)
+                                        .weight(1)
+                                        .apply(EnchantRandomlyLootFunction.builder())
+                        ).with(
+                                ItemEntry.builder(ItemRegistry.STEEL_BOOTS)
+                                        .weight(2)
+                                        .apply(EnchantRandomlyLootFunction.builder())
+                        )
                 );
             }
 
             for (Identifier lootTable : lootTables) {
                 if (lootTable.equals(id)) {
-                    table.pool(FabricLootPoolBuilder.builder()
-                    .rolls(UniformLootNumberProvider.create(0, 3))
-                    .with(
-                        ItemEntry.builder(ItemRegistry.STEEL_NUGGET)
-                        .weight(30)
-                        .apply(SetCountLootFunction.builder(
-                            UniformLootNumberProvider.create(4, 12)
-                        ))
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_INGOT)
-                        .weight(20)
-                        .apply(SetCountLootFunction.builder(
-                            UniformLootNumberProvider.create(1, 3)
-                        ))
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_SHOVEL).weight(3)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_PICKAXE).weight(3)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_AXE).weight(3)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_HOE).weight(3)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_SWORD).weight(3)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_HELMET).weight(2)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_CHESTPLATE).weight(1)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_LEGGINGS).weight(1)
-                    ).with(
-                        ItemEntry.builder(ItemRegistry.STEEL_BOOTS).weight(2)
-                    ));
+                    tableBuilder.pool(LootPool.builder()
+                            .rolls(UniformLootNumberProvider.create(0, 3))
+                            .with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_NUGGET)
+                                            .weight(30)
+                                            .apply(SetCountLootFunction.builder(
+                                                    UniformLootNumberProvider.create(4, 12)
+                                            ))
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_INGOT)
+                                            .weight(20)
+                                            .apply(SetCountLootFunction.builder(
+                                                    UniformLootNumberProvider.create(1, 3)
+                                            ))
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_SHOVEL).weight(3)
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_PICKAXE).weight(3)
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_AXE).weight(3)
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_HOE).weight(3)
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_SWORD).weight(3)
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_HELMET).weight(2)
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_CHESTPLATE).weight(1)
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_LEGGINGS).weight(1)
+                            ).with(
+                                    ItemEntry.builder(ItemRegistry.STEEL_BOOTS).weight(2)
+                            ));
 
                     break;
                 }
