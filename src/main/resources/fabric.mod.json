@@ -20,7 +20,7 @@
         "issues": "https://github.com/realguyman/steel/issues"
     },
     "depends": {
-        "minecraft": "1.18.x",
+        "minecraft": "1.19.x",
         "fabricloader": ">=0.14.9",
         "fabric": "*",
         "java": ">=17"
