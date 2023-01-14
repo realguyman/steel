@@ -28,7 +28,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "io.github.realguyman.steel.Initializer"
+          "io.github.realguyman.steel.Steel"
         ]
     },
     "icon": "assets/steel/icon.png"

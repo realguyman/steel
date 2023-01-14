@@ -11,7 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Configuration {
-    private static final Path filePath = FabricLoader.getInstance().getConfigDir().resolve(Initializer.MOD_ID + ".json");
+    private static final Path filePath = FabricLoader.getInstance().getConfigDir().resolve(Steel.MOD_ID + ".json");
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
     public static int helmetArmorRating = 2;

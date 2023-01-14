@@ -1,7 +1,7 @@
 package io.github.realguyman.steel.registry;
 
 import io.github.realguyman.steel.Configuration;
-import io.github.realguyman.steel.Initializer;
+import io.github.realguyman.steel.Steel;
 import io.github.realguyman.steel.SteelArmorMaterial;
 import io.github.realguyman.steel.SteelToolMaterial;
 import io.github.realguyman.steel.item.SteelAxeItem;
@@ -67,7 +67,7 @@ public class ItemRegistry {
             new FabricItemSettings().group(ItemGroup.COMBAT));
 
     private static void add(String name, Item item) {
-        Registry.register(Registry.ITEM, new Identifier(Initializer.MOD_ID, name), item);
+        Registry.register(Registry.ITEM, new Identifier(Steel.MOD_ID, name), item);
     }
 
     public static void register() {

@@ -20,7 +20,7 @@ import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOffers.Factory;
 import net.minecraft.village.VillagerProfession;
 
-public class Initializer implements ModInitializer {
+public class Steel implements ModInitializer {
     public static final String MOD_ID = "steel";
 
     private static final String[] CHEST_LOOT_TABLES = {
