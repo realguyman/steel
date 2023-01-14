@@ -1,19 +1,19 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "##",
-        "#|",
-        " |"
-    ],
-    "key": {
-        "#": {
-            "item": "steel:steel_ingot"
-        },
-        "|": {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "#|",
+    " |"
+  ],
+  "key": {
+    "#": {
+      "item": "steel:steel_ingot"
     },
-    "result": {
-        "item": "steel:steel_axe"
+    "|": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "item": "steel:steel_axe"
+  }
 }

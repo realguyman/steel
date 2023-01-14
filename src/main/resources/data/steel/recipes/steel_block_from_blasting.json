@@ -1,9 +1,9 @@
 {
-    "type": "minecraft:blasting",
-    "ingredient": {
-        "item": "minecraft:iron_block"
-    },
-    "result": "steel:steel_block",
-    "experience": 9,
-    "cookingtime": 28800
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "minecraft:iron_block"
+  },
+  "result": "steel:steel_block",
+  "experience": 9,
+  "cookingtime": 28800
 }

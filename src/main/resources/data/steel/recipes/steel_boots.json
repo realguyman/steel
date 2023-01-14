@@ -1,15 +1,15 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "# #",
-        "# #"
-    ],
-    "key": {
-        "#": {
-            "item": "steel:steel_ingot"
-        }
-    },
-    "result": {
-        "item": "steel:steel_boots"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "steel:steel_ingot"
     }
+  },
+  "result": {
+    "item": "steel:steel_boots"
+  }
 }

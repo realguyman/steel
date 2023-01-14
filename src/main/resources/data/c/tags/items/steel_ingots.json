@@ -1,6 +1,6 @@
 {
-    "replace": false,
-    "values": [
-        "steel:steel_ingot"
-    ]
+  "replace": false,
+  "values": [
+    "steel:steel_ingot"
+  ]
 }

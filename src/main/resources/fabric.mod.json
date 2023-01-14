@@ -1,35 +1,35 @@
 {
-    "schemaVersion": 1,
-    "id": "steel",
-    "name": "Steel",
-    "version": "${version}",
-    "description": "Create tougher, more durable equipment.",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "realguyman",
-            "contact": {
-                "homepage": "https://github.com/realguyman",
-                "email": "realguyman@protonmail.com"
-            }
-        }
-    ],
-    "contact": {
-        "homepage": "https://www.curseforge.com/minecraft/mc-mods/steel-for-fabric",
-        "sources": "https://github.com/realguyman/steel",
-        "issues": "https://github.com/realguyman/steel/issues"
-    },
-    "depends": {
-        "minecraft": "1.19.x",
-        "fabricloader": ">=0.14.9",
-        "fabric": "*",
-        "java": ">=17"
-    },
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-          "io.github.realguyman.steel.Steel"
-        ]
-    },
-    "icon": "assets/steel/icon.png"
+  "schemaVersion": 1,
+  "id": "steel",
+  "name": "Steel",
+  "version": "${version}",
+  "description": "Create tougher, more durable equipment.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "realguyman",
+      "contact": {
+        "homepage": "https://github.com/realguyman",
+        "email": "realguyman@protonmail.com"
+      }
+    }
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/steel-for-fabric",
+    "sources": "https://github.com/realguyman/steel",
+    "issues": "https://github.com/realguyman/steel/issues"
+  },
+  "depends": {
+    "minecraft": "1.19.x",
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "java": ">=17"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.realguyman.steel.Steel"
+    ]
+  },
+  "icon": "assets/steel/icon.png"
 }

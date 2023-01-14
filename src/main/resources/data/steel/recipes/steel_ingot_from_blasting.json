@@ -1,9 +1,9 @@
 {
-    "type": "minecraft:blasting",
-    "ingredient": {
-        "item": "minecraft:iron_ingot"
-    },
-    "result": "steel:steel_ingot",
-    "experience": 1,
-    "cookingtime": 3200
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": "steel:steel_ingot",
+  "experience": 1,
+  "cookingtime": 3200
 }
