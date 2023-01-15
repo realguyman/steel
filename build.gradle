@@ -17,6 +17,17 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api}"
 }
 
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        steel {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
 java {
     withSourcesJar()
 }
