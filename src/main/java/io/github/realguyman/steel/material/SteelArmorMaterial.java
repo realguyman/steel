@@ -1,5 +1,6 @@
-package io.github.realguyman.steel;
+package io.github.realguyman.steel.material;
 
+import io.github.realguyman.steel.Configuration;
 import io.github.realguyman.steel.registry.ItemRegistry;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;

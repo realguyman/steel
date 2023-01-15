@@ -2,8 +2,8 @@ package io.github.realguyman.steel.registry;
 
 import io.github.realguyman.steel.Configuration;
 import io.github.realguyman.steel.Steel;
-import io.github.realguyman.steel.SteelArmorMaterial;
-import io.github.realguyman.steel.SteelToolMaterial;
+import io.github.realguyman.steel.material.SteelArmorMaterial;
+import io.github.realguyman.steel.material.SteelToolMaterial;
 import io.github.realguyman.steel.item.SteelAxeItem;
 import io.github.realguyman.steel.item.SteelHoeItem;
 import io.github.realguyman.steel.item.SteelPickaxeItem;
