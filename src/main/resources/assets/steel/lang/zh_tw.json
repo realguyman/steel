@@ -1,0 +1,15 @@
+{
+  "item.steel.steel_nugget": "鋼粒",
+  "item.steel.steel_ingot": "鋼錠",
+  "block.steel.steel_block": "鋼塊",
+  "item.steel.steel_helmet": "鋼製頭盔",
+  "item.steel.steel_chestplate": "鋼製胸甲",
+  "item.steel.steel_leggings": "鋼製護腿",
+  "item.steel.steel_boots": "鋼製靴子",
+  "item.steel.steel_shovel": "鋼鏟",
+  "item.steel.steel_pickaxe": "鋼鎬",
+  "item.steel.steel_axe": "鋼斧",
+  "item.steel.steel_hoe": "鋼鋤",
+  "item.steel.steel_sword": "鋼劍",
+  "itemGroup.steel.all": "鋼"
+}
